@@ -17,23 +17,9 @@ export const metadata: Metadata = {
   title: "Helping Engineers - Your Campus Shopping Destination",
   description:
     "Exclusive student discounts, EMI options, and lightning-fast delivery on all your favorite products. Built by students, for students.",
-  generator: "v0.app",
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    icon: "/favicon.png",
+    apple: "/favicon.png",
   },
 }
 
