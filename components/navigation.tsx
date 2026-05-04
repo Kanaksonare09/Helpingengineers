@@ -56,7 +56,7 @@ export function Navigation() {
     { href: "/products", label: "Products" },
     { href: "/blogs", label: "Blogs" },
     { href: "/about", label: "About" },
-    { href: "/feedback", label: "Feedback" },
+    { href: "/feedback", label: "Contact" },
   ]
 
   return (
