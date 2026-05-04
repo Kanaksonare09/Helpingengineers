@@ -1,0 +1,227 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* FLIPKART-INSPIRED PROFESSIONAL COLOR SYSTEM */
+  --flipkart-blue: 40 116 240; /* #2874F0 - Primary Brand */
+  --flipkart-yellow: 255 214 0; /* #FFD600 - Accent */
+  --amazon-orange: 255 153 0; /* #FF9900 - CTA */
+  
+  --background: 247 249 252; /* Soft gray-blue #F7F9FC */
+  --foreground: 33 33 33; /* Near black #212121 */
+  --card: 255 255 255; /* Pure white cards */
+  --card-foreground: 33 33 33; /* Near black text */
+  --popover: 255 255 255;
+  --popover-foreground: 33 33 33;
+  --primary: 40 116 240; /* Flipkart Blue #2874F0 */
+  --primary-foreground: 255 255 255;
+  --secondary: 248 250 252; /* Very light gray #F8FAFC */
+  --secondary-foreground: 33 33 33;
+  --muted: 241 245 249; /* #F1F5F9 */
+  --muted-foreground: 100 116 139; /* #64748B */
+  --accent: 255 153 0; /* Amazon Orange #FF9900 */
+  --accent-foreground: 255 255 255;
+  --destructive: 239 68 68; /* #EF4444 red */
+  --destructive-foreground: 255 255 255;
+  --border: 226 232 240; /* #E2E8F0 */
+  --input: 226 232 240;
+  --ring: 40 116 240;
+  --chart-1: 40 116 240;
+  --chart-2: 139 92 246;
+  --chart-3: 34 197 94;
+  --chart-4: 251 146 60;
+  --chart-5: 244 63 94;
+  --radius: 0.75rem;
+  --sidebar: 255 255 255;
+  --sidebar-foreground: 33 33 33;
+  --sidebar-primary: 40 116 240;
+  --sidebar-primary-foreground: 255 255 255;
+  --sidebar-accent: 248 250 252;
+  --sidebar-accent-foreground: 33 33 33;
+  --sidebar-border: 226 232 240;
+  --sidebar-ring: 40 116 240;
+}
+
+.dark {
+  /* DARK MODE - FLIPKART INSPIRED */
+  --background: 17 24 39; /* Dark blue-gray #111827 */
+  --foreground: 243 244 246; /* Light gray #F3F4F6 */
+  --card: 31 41 55; /* Darker gray #1F2937 */
+  --card-foreground: 243 244 246;
+  --popover: 31 41 55;
+  --popover-foreground: 243 244 246;
+  --primary: 59 130 246; /* Bright blue #3B82F6 */
+  --primary-foreground: 255 255 255;
+  --secondary: 55 65 81; /* #374151 */
+  --secondary-foreground: 243 244 246;
+  --muted: 55 65 81;
+  --muted-foreground: 156 163 175; /* #9CA3AF */
+  --accent: 251 146 60; /* Orange #FB923C */
+  --accent-foreground: 255 255 255;
+  --destructive: 248 113 113; /* #F87171 */
+  --destructive-foreground: 255 255 255;
+  --border: 55 65 81;
+  --input: 55 65 81;
+  --ring: 59 130 246;
+  --chart-1: 59 130 246;
+  --chart-2: 168 85 247;
+  --chart-3: 34 197 94;
+  --chart-4: 251 146 60;
+  --chart-5: 244 63 94;
+  --sidebar: 31 41 55;
+  --sidebar-foreground: 243 244 246;
+  --sidebar-primary: 59 130 246;
+  --sidebar-primary-foreground: 255 255 255;
+  --sidebar-accent: 55 65 81;
+  --sidebar-accent-foreground: 243 244 246;
+  --sidebar-border: 55 65 81;
+  --sidebar-ring: 59 130 246;
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.6);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s linear infinite;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background-size: 1000px 100%;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Product image cropping - Premium quality without watermarks */
+.product-image-container {
+  overflow: hidden;
+  position: relative;
+  background: white;
+  border-radius: 0.75rem;
+}
+
+.product-image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.45);
+  object-position: center center;
+  clip-path: inset(13% 13% 13% 13%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-image-container:hover img {
+  transform: scale(1.5);
+}
+
+/* Slideshow image cropping - Premium crop to hide watermarks */
+.slideshow-image-container {
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.slideshow-image-container img {
+  object-fit: contain;
+  transform: scale(1.35);
+  clip-path: inset(15% 15% 15% 15%);
+}
+
+/* Smooth transitions for better UX */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
